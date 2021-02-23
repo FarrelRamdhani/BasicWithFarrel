@@ -1,5 +1,9 @@
 def Count(word, letter):
-    pass
+    count = 0
+    for i in word:
+        if i == letter:
+            count+=1
+    return count
 
 #Define Variable
 count = 0
@@ -17,4 +21,5 @@ while True:
             print("Masukkan ulang huruf dengan benar!")
             letter_count = 0
     count = Count(word, letter)
+    print("{0}, memiliki huruf {1}, sebanyak {2}".format(word, letter, count))
     print("")
