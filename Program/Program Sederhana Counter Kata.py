@@ -2,14 +2,19 @@ def Count(word, letter):
     pass
 
 #Define Variable
-flag_letter = 0
+count = 0
+letter_count = 0
 
 while True:
     word = input("Masukkan kalimat :")
-    while flag_letter == 0:
+    while True:
         letter = input("Masukkan huruf yang ingin dicari :")
-        if count(letter)!= 1:
-            flag_letter = 0
-            print("Masukkan ulang huruf")
+        for i in letter:
+            letter_count = letter_count + 1
+        if letter_count == 1:
+            break
+        else:
+            print("Masukkan ulang huruf dengan benar!")
+            letter_count = 0
     count = Count(word, letter)
     print("")
