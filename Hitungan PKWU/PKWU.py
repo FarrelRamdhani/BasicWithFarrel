@@ -43,23 +43,23 @@ def karyawanTahun(karyawan, jumlah):
         biaya = 0
     return biaya
 
-def overheadHari(overheadGas, overheadListrik, overheadLain):
+def overheadHari(overheadGas, overheadListrik, overheadAir, overheadLain):
     try:
-        overhead = (overheadGas + overheadListrik + overheadLain)/30
+        overhead = (overheadGas + overheadListrik + overheadAir + overheadLain)/30
     except:
         overhead = 0
     return overhead
 
 def overheadBulan(overheadGas, overheadListrik, overheadLain):
     try:
-        overhead = (overheadGas + overheadListrik + overheadLain)
+        overhead = (overheadGas + overheadListrik + overheadAir + overheadLain)
     except:
         overhead = 0
     return overhead
 
 def overheadTahun(overheadGas, overheadListrik, overheadLain):
     try:
-        overhead = (overheadGas + overheadListrik + overheadLain)*12
+        overhead = (overheadGas + overheadListrik + overheadAir + overheadLain)*12
     except:
         overhead = 0
     return overhead
