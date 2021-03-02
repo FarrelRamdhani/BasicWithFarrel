@@ -22,23 +22,23 @@ def nominalUntung(untungHpp, untungNominal):
         untung = untungTotal = 0
     return untung, untungTotal
 
-def karyawanBulan(karyawan, jumlah, gaji):
+def karyawanBulan(karyawan, jumlah):
     try:
-        biaya = karyawan * jumlah * gaji
+        biaya = karyawan * jumlah
     except:
         biaya = 0
     return biaya
 
-def karyawanHari(karyawan, jumlah, gaji):
+def karyawanHari(karyawan, jumlah):
     try:
-        biaya = (karyawan * jumlah * gaji)/30
+        biaya = (karyawan * jumlah)/30
     except:
         biaya = 0
     return biaya
 
-def karyawanTahun(karyawan, jumlah, gaji):
+def karyawanTahun(karyawan, jumlah):
     try:
-        biaya = karyawan * jumlah * gaji * 12
+        biaya = karyawan * jumlah * 12
     except:
         biaya = 0
     return biaya

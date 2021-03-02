@@ -27,6 +27,11 @@ untung = 0
 untungTotal = 0
 
 #Kalkulasi Gaji
+flag_3 = 0
+
+gajiKaryawan = 0
+gajiJumlah = 0
+gajiTotal = 0
 
 #Kalkulasi Biaya Overhead
 
@@ -44,7 +49,7 @@ while True:
         flag_1 = 0
 
     if flag_1 == 1:
-        print("")
+        print("\n --Kalkulasi Biaya HPP-- \n")
         try:
             hppVariabel = int(input("Masukkan harga variabel per produk : "))
             hppGajiProduk = int(input("Masukkan gaji karyawan per hari : "))
@@ -61,7 +66,7 @@ while True:
         hppVariabel = hppGajiProduk = hppJumlahProduk = hppOverheadProduk = 0
 
     elif flag_1 == 2:
-        print("")
+        print("\n --Kalkulasi Keuntungan-- \n")
         print("Masukkan menu yang akan dipilih")
         print("1. Untung Persentase \n2. Untung Nominal")
 
@@ -72,7 +77,7 @@ while True:
             flag_2 = 0
 
         if flag_2 == 1:
-            print("")
+            print("\n ---Untung Persentase--- \n")
             try:
                 untungHpp = int(input("Masukkan HPP : "))
                 untungPersen = int(input("Masukkan Persentase Keuntungan : "))
@@ -85,7 +90,7 @@ while True:
             untungHpp = untungPersen = 0
 
         elif flag_2 == 2:
-            print("")
+            print("\n ---Untung Nominal--- \n")
             try:
                 untungHpp = int(input("Masukkan HPP : "))
                 untungNominal = int(input("Masukkan Nominal Keuntungan : "))
@@ -99,7 +104,55 @@ while True:
             pass
 
     elif flag_1 == 3:
-        pass
+        print("\n --Kalkulasi Gaji Karyawan-- \n")
+        print("Masukkan menu yang akan dipilih")
+        print("1. Gaji Harian \n2. Gaji Bulanan \n3. Gaji Tahunan")
+
+        try:
+            flag_3 = int(input("Masukkan menu : "))
+        except:
+            print("Masukkan pilihan dengan benar!")
+            flag_3 = 0
+
+        if flag_3 == 1:
+            print("\n ---Gaji Harian--- \n")
+            try:
+                gajiKaryawan = int(input("Masukkan Gaji Bulanan Karyawan : "))
+                gajiJumlah = int(input("Masukkan Jumlah Karyawan :"))
+            except:
+                print("Masukkan pilihan dengan benar! \n")
+                gajiKaryawan = gajiJumlah = 0
+
+            gajiTotal = PKWU.karyawanHari(gajiKaryawan, gajiJumlah)
+            print("Jadi, Gaji Harian Karyawan Adalah :", gajiTotal)
+
+        elif flag_3 == 2:
+            print("\n ---Gaji Bulanan--- \n")
+            try:
+                gajiKaryawan = int(input("Masukkan Gaji Bulanan Karyawan : "))
+                gajiJumlah = int(input("Masukkan Jumlah Karyawan :"))
+            except:
+                print("Masukkan pilihan dengan benar! \n")
+                gajiKaryawan = gajiJumlah = 0
+
+            gajiTotal = PKWU.karyawanBulan(gajiKaryawan, gajiJumlah)
+            print("Jadi, Gaji Bulanan Karyawan Adalah :", gajiTotal)
+
+        elif flag_3 == 3:
+            print("\n ---Gaji Tahunan--- \n")
+            try:
+                gajiKaryawan = int(input("Masukkan Gaji Bulanan Karyawan : "))
+                gajiJumlah = int(input("Masukkan Jumlah Karyawan : "))
+            except:
+                print("Masukkan pilihan dengan benar! \n")
+                gajiKaryawan = gajiJumlah = 0
+
+            gajiTotal = PKWU.karyawanTahun(gajiKaryawan, gajiJumlah)
+            print("Jadi, Gaji Tahun Karyawan Adalah :", gajiTotal)
+
+        else:
+            pass
+
     elif flag_1 == 4:
         pass
     elif flag_1 == 5:
