@@ -50,14 +50,14 @@ def overheadHari(overheadGas, overheadListrik, overheadAir, overheadLain):
         overhead = 0
     return overhead
 
-def overheadBulan(overheadGas, overheadListrik, overheadLain):
+def overheadBulan(overheadGas, overheadListrik, overheadAir, overheadLain):
     try:
         overhead = (overheadGas + overheadListrik + overheadAir + overheadLain)
     except:
         overhead = 0
     return overhead
 
-def overheadTahun(overheadGas, overheadListrik, overheadLain):
+def overheadTahun(overheadGas, overheadListrik, overheadAir, overheadLain):
     try:
         overhead = (overheadGas + overheadListrik + overheadAir + overheadLain)*12
     except:
