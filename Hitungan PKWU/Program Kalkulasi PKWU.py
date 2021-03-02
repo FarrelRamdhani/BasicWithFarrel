@@ -188,6 +188,7 @@ while True:
                 overheadAir = int(input("Masukkan Biaya Air Bulanan : "))
                 overheadLain = int(input("Masukkan Biaya Lain Bulanan : "))
             except:
+                print("Masukkan biaya dengan benar! \n")
                 overheadListrik = overheadGas = overheadAir = overheadLain = 0
 
             overhead = PKWU.overheadHari(overheadListrik, overheadGas, overheadAir, overheadLain)
@@ -203,6 +204,7 @@ while True:
                 overheadAir = int(input("Masukkan Biaya Air Bulanan : "))
                 overheadLain = int(input("Masukkan Biaya Lain Bulanan : "))
             except:
+                print("Masukkan biaya dengan benar! \n")
                 overheadListrik = overheadGas = overheadAir = overheadLain = 0
 
             overhead = PKWU.overheadBulan(overheadListrik, overheadGas, overheadAir, overheadLain)
@@ -218,6 +220,7 @@ while True:
                 overheadAir = int(input("Masukkan Biaya Air Bulanan : "))
                 overheadLain = int(input("Masukkan Biaya Lain Bulanan : "))
             except:
+                print("Masukkan biaya dengan benar! \n")
                 overheadListrik = overheadGas = overheadAir = overheadLain = 0
 
             overhead = PKWU.overheadTahun(overheadListrik, overheadGas, overheadAir, overheadLain)
@@ -229,7 +232,7 @@ while True:
             pass
 
     elif flag_1 == 5:
-        pass
+        print("\n --On Progress-- \n")
 
     else:
         pass
